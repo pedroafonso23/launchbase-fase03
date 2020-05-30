@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+  
+        <!-- Aqui vai ser inserido html de outras paginas com nunjucks -->
+        {% block head %}
+        {% endblock %}
+
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="icon" href="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png" type="image/x-icon" />
+    </head>
+
+    <body>
+        <header>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/classes">Classes</a>
+                <a href="/content">Content</a>
+                <a target="_blank" href="https://discordapp.com/invite/gCRAFhc">Join Our Community</a>
+                <a target="_blank" href="mailto:oi@rocketseat.com.br">Send an Email</a>
+                <a target="_blank" href="tel:+5547992078767">Call Us</a>
+            </div>
+        </header>
+
+        <!-- Aqui vai ser inserido html de outras paginas com nunjucks -->
+        {% block content %}       
+        {% endblock %}
+
+    </body>
+
+</html>

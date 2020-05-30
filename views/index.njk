@@ -1,0 +1,26 @@
+<!-- Esse comando do nunjucks chama a pagina layout nessa posicao e insere o block content dessa pagina no layout -->
+{% extends "layout.njk" %}
+
+<!-- Tipo assim: chama tudo que tem em layout mas coloca isso ai embaixo no block content do layout -->
+{% block head %}
+
+    <title>LaunchBase Fase 02</title>
+    
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <img src="{{ data_index.avatar_url }}" alt="Profile picture {{ data_index.name }}">
+        <h1>{{ data_index.name }}</h1>
+        <h2>{{ data_index.role }}</h2>
+        <p>{{ data_index.description }}</a></p>
+    </div>
+
+    <div id="links-footer" class="links">
+        {% for link in data_index.links %}
+            <a target="_blank" href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>LaunchBase Fase 02 - {{ item.id }}</title>
+{% endblock %}
+
+{% block content %}
+
+    <section class="course">
+
+            <div class="card" id="{{ item.id }}">
+                <div class="card_image-container-content{{ item.num }}">
+                    <img src="{{ item.img_src }}" alt="Thumbnail Video Class {{ item.id }}">
+                </div>
+
+                <div class="card_content">
+                    <h1>Course Details</h1>
+                    <p>{{ item.details }}</p>
+                </div>
+
+                <div class="card_info">
+                    <p>{{ item.modules }}</p>
+                    <p class="card_price">Click here to buy the course right now for only <br> {{ item.price }}!</p>
+                </div>
+            </div>
+
+    </section>
+
+{% endblock %}

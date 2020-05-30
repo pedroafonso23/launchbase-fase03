@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300&display=swap');
+
+:root {
+    --color-green: #50fa7b;
+    --color-rocket: #7159c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #282A36;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    text-align: center;
+}
+
+a {
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-green);
+    transition: color 200ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img {
+    border-radius: 50%;
+    border: 3px solid var(--color-green);
+    margin-bottom: 16px;
+    height: 300px;
+}
+
+#wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 600;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p {
+    max-width: 450px;
+    margin: 32px auto;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+#wrapper p.about {
+    max-width: 750px;
+    margin: 32px auto;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+#wrapper p a {
+    color: var(--color-green);
+    text-decoration: none;
+}
+
+#links-footer a {
+    border-bottom: 1px solid var(--color-green);
+}
+
+/* CARDS */
+
+.cards {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    column-gap: 50px;
+}
+
+.card {
+    background-color: #7159c160;
+    display: grid;
+    cursor: pointer;
+}
+
+.card_image-container img {
+    width: 100%;
+}
+
+.card_image-container-content1 img {
+    display: block;
+    width: 40%;
+    margin: 10% auto;
+    align-items: center;
+}
+
+.card_image-container-content2 img {
+    display: block;
+    width: 70%;
+    margin: 10% auto;
+    align-items: center;
+}
+
+.card_image-container-content3 img {
+    display: block;
+    width: 50%;
+    margin: 10% auto;
+    align-items: center;
+}
+
+.card_content, .card_info {
+    padding: 24px;
+}
+
+.card_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.card_price {
+    background-color: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* MODAL */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: var(--color-rocket);
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: white;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.close-modal.maximize {
+    color: white;
+    position: absolute;
+    right: -52px;
+    top: -46px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal {
+    color: white;
+    position: absolute;
+    right: 32px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.maximize-modal.maximize {
+    color: white;
+    position: absolute;
+    right: -28px;
+    top: -46px;
+    cursor: pointer;
+}
+
+/* MODAL.ACTIVE */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    position: absolute;
+    width: 80%;
+    height: 89%;
+    top: 6%;
+    right: 10%;
+}
+
+.modal-content.maximize iframe {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 4%;
+    left: 0;
+}
+
+/* ERROR 404 */
+
+#error {
+    margin: 38px;
+}
+
+div#error h2 {
+    padding: 24px 0;
+}
+
+/* FEATURED */
+
+.featured-wrapper.card_image-container {
+    position: relative;
+}
+
+.featured {
+    /* Para usar position aboslute, o pai desse cara dever ter position relative */
+    position: absolute;
+
+    position: absolute;
+    background: #e4ab0a;
+    color: #111;
+    padding: 2px 8px;
+    position: absolute;
+    right: 5px;
+    border-radius: 16px;
+    top: -10px;
+}
+
+/* VIDEO PAGE */
+
+.video {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.card_video-container {
+    position: relative;
+    padding-top: 62.5%;
+}
+
+.card_video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.course {
+    margin: 28px auto;
+    max-width: 800px;
+}

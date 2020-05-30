@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>LaunchBase Fase 02 - About</title>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <img src="{{ data_about.img_src }}" alt="RocketSeat Logo">
+        <h1>{{ data_about.name }}</h1>
+        <h2>{{ data_about.designation }}</h2>
+        <p class="about">{{ data_about.description }}</p>
+    </div>
+
+    <div id="links-footer" class="links">
+        {% for link in data_about.links %}
+            <a target="_blank" href="{{ link.url }}">{{ link.name }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}
